@@ -2,7 +2,6 @@ var magik = magikcraft.io;
 
 // anvil rain
 //
-//TODO: is runif better than rnom?
 
 function arain(radius, typ){
     radius = parseInt(radius) || 20;
