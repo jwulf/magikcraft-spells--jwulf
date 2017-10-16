@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
 
-function heal(name) {
-
-    magik.auxilium(name);
+function heal() {
+    magik.auxilium();
+    magik.auxilium('sitapati');
 }
