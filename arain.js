@@ -1,7 +1,6 @@
 var magik = magikcraft.io;
 
 // anvil rain
-//
 
 function arain(radius, typ){
     radius = parseInt(radius) || 20;
