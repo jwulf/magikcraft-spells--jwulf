@@ -27,9 +27,7 @@ function spawnz(typ='ZOMBIE', n = 50, times = 5, baseloc){
     times -= 1;
     if (times > 0) {
         const task = magik.setTimeout(
-            () => {
-                spawnz(typ, n, times, baseloc);
-            }, 
+            () => spawnz(typ, n, times, baseloc), 
             200
         );
     }
