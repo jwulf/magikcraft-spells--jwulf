@@ -81,12 +81,15 @@ function rnorm_unit(count) {
     }
     return ret/count;
 }
+
 function rnorm(mean, sd) {
     return randn_bm() * sd + mean;
 }
+
 function runif(from, to) {
     return scale(Math.random(), from, to);
 }
+
 function scale(r, from, to) {
     return Math.floor(r*(to - from)+from)
 }
@@ -94,5 +97,3 @@ function scale(r, from, to) {
 function rndBlock(loc, radius, height) {
     return loc.getBlock().getRelative(rnorm(0, radius/5), runif(0, height), rnorm(0, radius/5));
 }
-
-
