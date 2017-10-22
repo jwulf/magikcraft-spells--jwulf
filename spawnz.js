@@ -3,9 +3,11 @@ var magik = magikcraft.io;
 function spawnz(typ='ZOMBIE', n = 50, times = 5, baseloc){
     const EntityType = magik.type("entity.EntityType");
     const sender = magik.getSender();
+    
     if (typ == '.') {
         typ = undefined;
     }
+
     if (!baseloc) {
         baseloc = create_spawn_point(magik.aspecto());
     }
@@ -30,8 +32,7 @@ function spawnz(typ='ZOMBIE', n = 50, times = 5, baseloc){
             () => spawnz(typ, n, times, baseloc), 
             200
         );
-    }
-        
+    }       
 }
 
 function create_spawn_point(loc) {
@@ -57,7 +58,6 @@ function create_spawn_point(loc) {
     
     return spawnloc;
 }
-
 
 function rnd_monster_type() {
     return 'ZOMBIE'
@@ -90,6 +90,7 @@ function runif(from, to) {
 function scale(r, from, to) {
     return Math.floor(r*(to - from)+from)
 }
+
 function rndBlock(loc, radius, height) {
     return loc.getBlock().getRelative(rnorm(0, radius/5), runif(0, height), rnorm(0, radius/5));
 }
