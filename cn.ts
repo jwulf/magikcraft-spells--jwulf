@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
 
 function cn() {
-	magik.dixit("Hello GitHub Constellation!")
+	magik.dixit("Hello GitHub Constellation Brisbane!")
 }
