@@ -1,6 +1,7 @@
 const magik = magikcraft.io;
 
-function fast() {
-    magik.celeritate();
-    magik.getSender().setFlySpeed(1);
+function fast(velocity = 1) {
+    const speed = Math.min(velocity, 1);
+    magik.getSender().setWalkSpeed(speed);
+    magik.getSender().setFlySpeed(speed);
 }
