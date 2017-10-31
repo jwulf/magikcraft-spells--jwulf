@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
-declare const Java: any;
+// declare const Java: any;
 
 const CommandCallback = Java.type("io.magikcraft.CommandCallback"),
     EventPriority = Java.type("org.bukkit.event.EventPriority"),
