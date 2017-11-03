@@ -5,8 +5,6 @@ var magik = magikcraft.io;
 function arain(radius, typ){
     radius = parseInt(radius) || 20;
     typ = typ || "ANVIL";
-    const a = d;
-    a =3; 
     for (var i = 0; i < 200; i++) {
         rndAnvil(radius, typ);
     }
