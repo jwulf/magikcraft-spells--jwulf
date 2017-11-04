@@ -1,6 +1,6 @@
 var magik = magikcraft.io;
 
-function karaage(typ='CHICKEN', n = 1){
+function karaage(n = 1){
     const Chicken = magik.type("entity.EntityType").CHICKEN;
     const sender = magik.getSender();
     const num = Math.min(n, 5);
