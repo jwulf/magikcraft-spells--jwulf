@@ -54,9 +54,10 @@ function localise(lang = 'en') {
                     '&3The World of&r &4&uMagikcraft'
                 ],
                 ja: [
-                    'ようこそ',
-                    'これは &6"キガム"&r の土地です。',
-                    '&uMagikcraft&rの世界で'
+                    '&uMagikcraft&r no sekai no kigamu',
+                     'no kuni e yōkoso',
+                     '',
+                     ''
                 ]
             }
         },
