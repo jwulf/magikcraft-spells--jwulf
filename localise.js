@@ -276,6 +276,9 @@ function localise(lang = 'en') {
                 ],
                 en: [
                     'Cast your remember spell here'
+                ],
+                ja: [
+                    'Oboete iru jumon o koko ni kyasuto suru'
                 ]
             }
         },
