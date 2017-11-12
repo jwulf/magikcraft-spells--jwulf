@@ -56,8 +56,8 @@ function localise(lang = 'en') {
                 ja: [
                     '&uMagikcraft&r no sekai no kigamu',
                      'no kuni e yokoso',
-                     ' ',
-                     ' '
+                     '.',
+                     '.'
                 ]
             }
         },
@@ -78,9 +78,10 @@ function localise(lang = 'en') {
                     'by saying &6special words&r'
                 ],
                 ja: [
-                    '&4&uマジックは&r、',
-                    '人が不可能なことをすることを可能にする力です',
-                    '特別な言葉を言って'
+                    '--- &4&uMagikku wa&r ---',
+                    'tokubetsuna kotoba o itte',
+                    'hitobito ga fukanona koto o suru',
+                    'koto o kano ni suru chikaradesu'
                 ]
             }
         },
@@ -89,22 +90,23 @@ function localise(lang = 'en') {
             strings: {
                 no: [
                     'Hei, jeg heter M.',
-                    '&4&u¡¡¡¡¡¡Hjelp!!!!!!&r',
+                    '&4&u!!!!Hjelp!!!!!!&r',
                     '&dSuperMegaCorp&r',
                     'stjal all &4&magien&r',
                     'i Kigamriket.'
                 ],
                 en: [
                     'Hello, my name is &aM&r.',
-                    '&4&u¡¡¡¡¡¡Help!!!!!!&r',
+                    '&4&u!!!!Help!!!!!!&r',
                     '&dSuperMegaCorp&r',
                     'stole all the &4&umagik',
                     'in the realm of Kigam.'
                 ],
                 ja: [
-                    'こんにちは、私の名前は "M"',
-                    '助けてください！',
-                    'SuperMegaCorpはすべての魔法を盗んだ！'
+                    "Kon'nichiwa watashinonamaeha M desu",
+                    '&4&u!!!!Tasukete!!!!&r',
+                    '&dSuperMegaCorp&r ga tochi no subete',
+                    'no &4&umahō&r o nusunda'
                 ]
             }
         },
@@ -452,6 +454,12 @@ function localise(lang = 'en') {
             hologram.strings[lang].forEach((text, line) =>
                 run(`hd setline ${hologram.name} ${line + 1} ${text}`)
             );
+            if (hologram.strings.en && hologram.strings[lang].length < hologram.strings.en.length) {
+                const diff = hologram.strings.en.length - hologram.strings[lang].length;
+                if (diff > 0) {
+
+                }
+            }
         }
     });
 }
