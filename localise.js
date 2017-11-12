@@ -458,12 +458,6 @@ function localise(lang = 'en') {
             hologram.strings[lang].forEach((text, line) =>
                 run(`hd setline ${hologram.name} ${line + 1} ${text}`)
             );
-            if (hologram.strings.en && hologram.strings[lang].length < hologram.strings.en.length) {
-                const diff = hologram.strings.en.length - hologram.strings[lang].length;
-                if (diff > 0) {
-
-                }
-            }
         }
     });
 }
