@@ -55,7 +55,7 @@ function localise(lang = 'en') {
                 ],
                 ja: [
                     '&uMagikcraft&r no sekai no kigamu',
-                     'no kuni e yōkoso',
+                     'no kuni e yokoso',
                      ' ',
                      ' '
                 ]
