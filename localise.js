@@ -106,7 +106,7 @@ function localise(lang = 'en') {
                     "Kon'nichiwa watashinonamaeha M desu",
                     '&4&u!!!!Tasukete!!!!&r',
                     '&dSuperMegaCorp&r ga tochi no subete',
-                    'no &4&umahō&r o nusunda'
+                    'no &4&umaho&r o nusunda'
                 ]
             }
         },
@@ -129,7 +129,7 @@ function localise(lang = 'en') {
                     "Yukan'na hitobito ga watashi",
                     'ni kuwawari, issho ni',
                     '&dSuperMegaCorp&r o utta ga,',
-                     '&4&umahō&r wa ushinawareta'
+                     '&4&umaho&r wa ushinawareta'
                 ]
             }
         },
@@ -155,7 +155,7 @@ function localise(lang = 'en') {
                     'wa &4&umajikku&r o torimodosou',
                     'to shite imasu. Karera ga suru mae',
                     'ni magik kotoba o mitsukete, sorera',
-                    'o asugarudo uchū sutēshon ni motte iki nasai!'
+                    'o asugarudo uchu suteshon ni motte iki nasai!'
                 ]
             }
         },
