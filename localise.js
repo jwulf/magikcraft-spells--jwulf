@@ -126,8 +126,10 @@ function localise(lang = 'en') {
                     'But &4&umagik&r was lost!!!'
                 ],
                 ja: [
-                    '勇敢なヒーローがSuperMegaCorpを破った',
-                    'しかし、魔法は失われました！'
+                    "Yukan'na hitobito ga watashi",
+                    'ni kuwawari, issho ni',
+                    '&dSuperMegaCorp&r o utta ga,',
+                     '&4&umahō&r wa ushinawareta'
                 ]
             }
         },
