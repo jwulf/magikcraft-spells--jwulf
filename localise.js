@@ -1,5 +1,7 @@
 var magik = magikcraft.io;
 
+const ja = require('strings-ja').strings;
+
 function localise(lang = 'en') {
 
     function run(cmd) {
