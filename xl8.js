@@ -2,6 +2,6 @@ const magik = magikcraft.io;
 
 function xl8() {
 
-    // argumentav
+    // arguments is an Object 
 	magik.dixit(arguments);
 }
