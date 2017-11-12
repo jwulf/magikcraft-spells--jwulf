@@ -1,4 +1,4 @@
 const magik = magikcraft.io;
 function test1() {
-    magik.dixit('Test');
+    magik.dixit('Test2');
 }
