@@ -2,34 +2,6 @@ var magik = magikcraft.io;
 
 function localise(lang = 'en') {
 
-    const nextTick = magik.setTimeout;
-
-    function series(arr, ready = null, safe = true) {
-        var length = arr.length
-            , orig
-
-        if (!length) return nextTick(ready, 1)
-
-        let handleItem = (idx) => {
-            arr[idx]((err) => {
-                if (err) return ready(err)
-                if (idx < length - 1) return handleItem(idx + 1)
-                return ready()
-            })
-        }
-
-        if (safe) {
-            orig = handleItem
-            handleItem = (idx) => {
-                nextTick(() => {
-                    orig(idx)
-                }, 1)
-            }
-        }
-
-        handleItem(0)
-    }
-
     function run(cmd) {
         var sudo = magik.getPlugin().getServer().getConsoleSender();
         magik.getPlugin().getServer().dispatchCommand(sudo, cmd);
