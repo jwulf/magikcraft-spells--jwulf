@@ -448,7 +448,7 @@ function localise(lang = 'en') {
     ];
 
     strings.forEach(hologram => {
-        if (hologram.strings[lang]) {
+        if (typeof hologram.strings[lang] !== 'undefined') {
             hologram.strings[lang].map((text, line) =>
                 run(`hd setline ${hologram.name} ${line + 1} ${text}`)
             );
