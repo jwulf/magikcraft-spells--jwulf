@@ -151,9 +151,11 @@ function localise(lang = 'en') {
                     'the &a&uAsgard Space Station&r!'
                 ],
                 ja: [
-                    '今すぐSuperMegaCorpが魔法を手に入れたい',
-                    '彼らがする前に魔法を見つける',
-                    '魔法を「アスガード」宇宙ステーションに持って行きなさい'
+                    'Ima sugu &dSuperMegaCorp&r',
+                    'wa &4&umajikku&r o torimodosou',
+                    'to shite imasu. Karera ga suru mae',
+                    'ni magik kotoba o mitsukete, sorera',
+                    'o asugarudo uchū sutēshon ni motte iki nasai!'
                 ]
             }
         },
