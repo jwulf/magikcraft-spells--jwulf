@@ -152,10 +152,10 @@ function localise(lang = 'en') {
                 ],
                 ja: [
                     '--- &dSuperMegaCorp&r ---',
-                    '警告してください！',
-                    'All &4&umagik&r is the property of',
-                    '&dSuperMegaCorp&r.',
-                    '他の人は罰せられる！'
+                    'Keikoku',
+                    'Subete no &4&umahō&r wa ',
+                    '&dSuperMegaCorp&r no shoyu-monodesu',
+                    "Shin'nyu-sha ga kiso sa remasu!"
                 ]
             }
         },
@@ -175,8 +175,10 @@ function localise(lang = 'en') {
                     'Find the magik word'
                 ],
                 ja: [
-                    'あなたは出かけるのに魔法を使う必要があります',
-                    '魔法の言葉を見つける'
+                    'Koko kara deru ni wa mahowotsukau',
+                    'hitsuyo ga arimasu',
+                    '&f[|||] &4[|||] &f[|||]',
+                    'Mahō no kotoba o mitsukeru'
                 ]
             }
         },
@@ -199,6 +201,15 @@ function localise(lang = 'en') {
                     'Type in &u/warp Lounge',
                     'it will take you to the next area.',
                     'Keep doing you, and see you soon!'
+                ],
+                ja: [
+                    '--- &aM&r ---',
+                    'Anata ga yatte kurete arigato',
+                    'Anata wa daredesuka, arigatogozaimasu',
+                    '',
+                    'Tsugi no eria ni iku ni wa',
+                    '/warp Lounge o tsukau',
+                    'Mata chikaiuchini o ai shimashou!'
                 ]
             }
         },
@@ -211,7 +222,7 @@ function localise(lang = 'en') {
                 en: [
                     '&4&uCongratulations!!!&r'
                 ],
-                ja: ['&4&u御目出度う！&r']
+                ja: ['&4&uOmedeto！&r']
             }
         },
         {
@@ -263,7 +274,7 @@ function localise(lang = 'en') {
                     'Fant du det magiske ordet? Det er tilbake, bak deg...'
                 ],
                 en: [
-                    "Did you find the magik word? It's back, behind you..."
+                    "Did you find the magik word? It's back up, behind you..."
                 ]
             }
         },
@@ -335,9 +346,9 @@ function localise(lang = 'en') {
                     'Once you get that, follow the path'
                 ],
                 ja: [
-                    '&uMagikcraft&rへようこそ！',
-                    'W、A、S、Dを使用して移動します。 見るためにマウスを使用してください。',
-                    '準備が整ったら、パスに従ってください'
+                    '&uMagikcraft&r e yokoso!！',
+                    '"W, A, S, D" o shiyo shite ido shimasu. Konpyuta no mausu o tsukatte miru',
+                    'Ima sugu pasu ni shitagatte kudasai'
                 ]
             }
         },
@@ -351,7 +362,7 @@ function localise(lang = 'en') {
                     'Use the Spacebar to jump'
                 ],
                 ja: [
-                    'スペースバーを押してジャンプする'
+                    'Supesuba o shiyo shite janpu suru'
                 ]
             }
         },
@@ -367,8 +378,8 @@ function localise(lang = 'en') {
                     'Walk though, and it will take you to the tutorial level'
                 ],
                 ja: [
-                    'Magikcraftは &uポータル&r',
-                    '歩いてください。 チュートリアルのレベルに進みます。'
+                    'Ryoko ni &upotaru&r o shiyo suru',
+                    'Chūtoriaru no reberu ni susumu'
                 ]
             }
         }

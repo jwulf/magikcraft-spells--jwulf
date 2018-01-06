@@ -1,7 +1,7 @@
 const { bar, color, style } = require('magikcraft-lore-ui-bar');
 
 const magik = magikcraft.io;
-const setTimeout = magik.setTimeout;
+// const setTimeout = magik.setTimeout;
 
 magik.dixit('Hi3');
 

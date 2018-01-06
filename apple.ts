@@ -8,5 +8,5 @@ function apple(quantity = 1) {
     for (let i = 0; i ++; i < quantity) {
        magik.getSender().getInventory().addItem(food);
     }
-    magik.dixit('Hello!')
+    magik.dixit('An apple a day!')
 }

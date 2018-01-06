@@ -10,6 +10,7 @@ function spy(name= "--help", seconds=20, fps = 20) {
         return;
     }
     global.film = {};
+    const film = global.film;
     film.frames = [];
 
     film.metadata = {
