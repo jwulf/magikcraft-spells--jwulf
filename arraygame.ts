@@ -9,6 +9,7 @@ function arraygame(numeral, player) {
         if (n >=0 && n <=9) magik.dixit(numeral + ' is called ' + numerals[n]);
         if (n == -1) {
             magik.dixit('Goodbye!');
+            return;
         }
     }
     input(self, 'Pick a number between 0 and 9 inclusive', arraygame);
