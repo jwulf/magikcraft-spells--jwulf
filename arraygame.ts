@@ -1,4 +1,5 @@
 const magik = magikcraft.io;
+const input = require('input');
 
 const numerals = ['Zero', 'One', 'Two', 'Three',
     'Four',
@@ -6,8 +7,14 @@ const numerals = ['Zero', 'One', 'Two', 'Three',
     'Nine'];
 
 function arraygame(numeral, player) {
-    const input = require('input');
     if (numeral) {
-        let n = parmagik.dixit('hello')
+        let n = parseInt(numeral);
+        if (n >=0 && n <=9) magik.dixit(numeral + ' is called ' + numerals[n]);
+        if (n != -1) next();
+    } else next();
+    
+}
+
+function next() {
     input(self, 'Pick a number between 0 and 9 inclusive', arraygame);
 }
