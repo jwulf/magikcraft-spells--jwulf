@@ -1,99 +1,72 @@
 const magik = magikcraft.io;
 
-const font = {
-    a: [0 ,24, 36, 138, 198, 198, 138, 138],
+/*
+ Fonts are bitmaps.
+ Each number is the decimal equivalent of the binary
+ bitmap of the line, for example: 00011000 = 24
+ Here is a bitmapped 'A':
+ 00011000 = 24
+ 00111100 = 60
+ 00100100 = 36
+ 01100110 = 102
+ 01111110 = 126
+ 01111110 = 126
+ 01100110 = 102
+ 01100110 = 102
+*/
+
+const fontData = {
+    BLOCKS_PER_CHAR_LINE: 8,
+    a: [24 ,60, 36, 102, 126, 126, 102, 102],
     b: [192, 192, 192, 192, 255, 194, 194, 252],
-    c:[255, 192, 192, 192, 192, 192, 192, 255],
-    d: [254, 195, 195, 195, 195, 195, 195,254],
-    e: [],
-    f: [],
-    g: [],
-    h: [],
-    i: []
-} 
-
-// const line = num => Array.from(num.toString(2))
-
-// const charmap = chardata => chardata.map(linedata => line(linedata))
-
-function write() {
-    const line = Array.from(font.a);
-    magik.dixit(line.toString());
+    c: [255, 192, 192, 192, 192, 192, 192, 255],
+    d: [254, 195, 195, 195, 195, 195, 195, 254],
+    e: [252, 128, 128, 252, 128, 128, 128, 252],
+    f: [0, 62, 32, 62, 32, 32, 32, 32],
+    g: [255, 255, 192, 192, 199, 195, 255, 255],
+    h: [102, 102, 102, 126, 102, 102, 102, 102],
+    i: [255, 126, 24, 24, 24, 24, 126, 255]
 }
 
-// Production steps of ECMA-262, Edition 6, 22.1.2.1
-function arrayFrom() {
-    var toStr = Object.prototype.toString;
-    var isCallable = function (fn) {
-      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
-    };
-    var toInteger = function (value) {
-      var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
-      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
-    };
-    var maxSafeInteger = Math.pow(2, 53) - 1;
-    var toLength = function (value) {
-      var len = toInteger(value);
-      return Math.min(Math.max(len, 0), maxSafeInteger);
-    };
+/*
+  Write the specified letters in space with blocks
+  Then wipe them out.
+  */
 
-    // The length property of the from method is 1.
-    return function from(arrayLike/*, mapFn, thisArg */) {
-      // 1. Let C be the this value.
-      var C = this;
+function write(word = 'abc') {
+    const BLOCK_TYPE = magik.type('Material').STONE
+    const PERSIST_SECONDS = 10
+    const BLOCKS_BETWEEN_LETTERS = 2
+    const BITS = fontData.BLOCKS_PER_CHAR_LINE
+    const SPACING = BLOCKS_BETWEEN_LETTERS + BITS
+    const blocks = []
 
-      // 2. Let items be ToObject(arrayLike).
-      var items = Object(arrayLike);
+    const decimal2binary = num => num.toString(2)
+    const addLeadingZeros = line => line.padStart(BITS, "0")
+    const binaryLine = line => Array.from(addLeadingZeros(decimal2binary(line)))
+    const binaryMap = fontCharData => fontCharData.map(line => binaryLine(line))
+    const getBlock = (x, y, z) => magik.getSender().getWorld().getBlockAt(x, y, z)
+    const storeBlock = (x, y, z) => blocks.push({x, y, z, blockType: getBlock(x, y, z).getType()})
+    const transformBlock = ({x, y, z, blockType}) => getBlock(x, y, z).setType(blockType)
+    const storeAndTransformBlock = ({x, y, z, blockType}) => storeBlock(x, y, z) && transformBlock({x, y, z, blockType})
 
-      // 3. ReturnIfAbrupt(items).
-      if (arrayLike == null) {
-        throw new TypeError('Array.from requires an array-like object - not null or undefined');
-      }
+    const here = magik.hic()
+    const x = here.getX() + 1 // horizontal
+    const y = here.getY() + 1 // vertical
+    const z = here.getZ() // the other horizontal
+    const letters = Array.from(word) // Convert to Array to get forEach
+    letters.forEach((char, letternum) =>
+       binaryMap(fontData[char]).forEach((line, linenum) =>
+         line.forEach((block, blocknum) =>
+           (block == "1" &&
+            storeAndTransformBlock({
+              x: x + blocknum + (letternum * SPACING),
+              y: y + line.length - linenum,
+              z,
+              blockType: BLOCK_TYPE})))))
 
-      // 4. If mapfn is undefined, then let mapping be false.
-      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
-      var T;
-      if (typeof mapFn !== 'undefined') {
-        // 5. else
-        // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
-        if (!isCallable(mapFn)) {
-          throw new TypeError('Array.from: when provided, the second argument must be a function');
-        }
-
-        // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
-        if (arguments.length > 2) {
-          T = arguments[2];
-        }
-      }
-
-      // 10. Let lenValue be Get(items, "length").
-      // 11. Let len be ToLength(lenValue).
-      var len = toLength(items.length);
-
-      // 13. If IsConstructor(C) is true, then
-      // 13. a. Let A be the result of calling the [[Construct]] internal method 
-      // of C with an argument list containing the single item len.
-      // 14. a. Else, Let A be ArrayCreate(len).
-      var A = isCallable(C) ? Object(new C(len)) : new Array(len);
-
-      // 16. Let k be 0.
-      var k = 0;
-      // 17. Repeat, while k < len… (also steps a - h)
-      var kValue;
-      while (k < len) {
-        kValue = items[k];
-        if (mapFn) {
-          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
-        } else {
-          A[k] = kValue;
-        }
-        k += 1;
-      }
-      // 18. Let putStatus be Put(A, "length", len, true).
-      A.length = len;
-      // 20. Return A.
-      return A;
-    };
-  }
+    // Make word disappear
+    magik.setTimeout(() =>
+        blocks.forEach(block => transformBlock(block)),
+        PERSIST_SECONDS * 1000)
+}
