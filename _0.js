@@ -1,9 +1,8 @@
 const magik = magikcraft.io;
 
 const events = require('events');
-events.playerInteract(function(evt) {
-    echo("Interact!");
-});
+
+events.playerInteract(evt => magik.dixit("Interact!"));
 
 function _0() {
     // a couple of tests
