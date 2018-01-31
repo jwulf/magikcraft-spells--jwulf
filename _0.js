@@ -10,5 +10,4 @@ function _0() {
     magik.dixit('hello'.includes('h'))
     magik.setTimeout(() => magik.dixit('Hello'), 1000)
     // magik.dixit(global);
-    events.
 }
