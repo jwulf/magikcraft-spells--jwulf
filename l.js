@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
 
-function l() {
+function main() {
     const Material = magik.type('Material');
     const looking = magik.aspecto();
     const world = magik.getSender().getWorld();
