@@ -50,5 +50,5 @@ const Events = {
 };
 
 function events() {
-	Emitter.on('PlayerMoveEvent', evt => log(evt.player))
+	Events.on('PlayerMoveEvent', evt => log(evt.player))
 }
