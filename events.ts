@@ -1,14 +1,54 @@
 const magik = magikcraft.io;
 
+const Emitter = new EventEmitter();
+
+const log = magik.dixit;
+
+// const Listener = Java.type("org.bukkit.event");
+// const HandlerList = Java.type("org.bukkit.event.HandlerList");
+const EventPriority = Java.type("org.bukkit.event.EventPriority");
+const EventCallback = Java.type("io.magikcraft.EventCallback");
+
+const eventTypes = {
+	PlayerDeathEvent: 'org.bukkit.event.entity.PlayerDeathEvent',
+	PlayerRespawnEvent: 'org.bukkit.event.player.PlayerRespawnEvent',
+	EntityDamageByEntityEvent: 'org.bukkit.event.entity.EntityDamageByEntityEvent',
+	EntityDamageEvent: 'org.bukkit.event.entity.EntityDamageEvent',
+	ProjectileHitEvent: 'org.bukkit.event.entity.ProjectileHitEvent',
+	PlayerItemConsumeEvent: 'org.bukkit.event.player.PlayerItemConsumeEvent',
+	PlayerQuitEvent: 'org.bukkit.event.player.PlayerQuitEvent',
+    PlayerMoveEvent: "org.bukkit.event.player.PlayerMoveEvent",
+	RegionEnterEvent: 'com.mewin.WGRegionEvents.events.RegionEnterEvent',
+	RegionLeaveEvent: 'com.mewin.WGRegionEvents.events.RegionLeaveEvent',
+	PlayerCommandPreprocessEvent: 'org.bukkit.event.player.PlayerCommandPreprocessEvent',
+};
+
+const Events = {
+
+	on: (eventName, callback) => Emitter.on(eventName, callback),
+
+	unregisterAll: () => {
+		Emitter.removeAllListeners();
+	},
+
+	registerAll: () => {
+		for (let type in eventTypes) {
+			const javaType = eventTypes[type];
+			Emitter.removeAllListeners();
+			magik.getPlugin().registerEvent(
+				Java.type(javaType).class,
+				EventPriority.MONITOR,
+				true,
+				new EventCallback({
+					callback: function (event: any) {						
+						Emitter.emit(type, event);
+					}
+				})
+			);
+		}
+	},
+};
+
 function events() {
-	const magik = magikcraft.io;
-    const mct1Events = (magik as any).eventNamespace('mct1.events');
-    magik.dixit(Object.keys(mct1Events).toString());
-    const EntityDeathEvent = Java.type("org.bukkit.event.entity.EntityDeathEvent");
-    const PlayerInteractEvent = Java.type("org.bukkit.event.player.PlayerInteractEvent");
-    // mct1Events.addEvent(EntityDeathEvent.class, evt => magik.dixit(evt.toString()));
-    mct1Events.addEvent(PlayerInteractEvent, evt => magik.dixit("Player Interacted"));
-    magik.dixit(mct1Events.events.length); // 2
-    //mct1Events.removeAll();
-    //magik.dixit(mct1Events.events.length); // 0
+	Emitter.on('PlayerMoveEvent', evt => log(evt.player))
 }
