@@ -22,9 +22,9 @@ const eventTypes = {
     PlayerCommandPreprocessEvent: 'org.bukkit.event.player.PlayerCommandPreprocessEvent',
 };
 
-
+declare const global;
 if (!Events) {
-    magik.dixit(Object.keyglobal)
+    magik.dixit(global)
     const Emitter = new EventEmitter();
 
 
