@@ -1,7 +1,8 @@
 const magik = magikcraft.io;
 const log = magik.dixit;
-
+magik.dixit('1')
 let Events = magik.memento.getItem('events');
+magik.dixit('2')
 
 // const Listener = Java.type("org.bukkit.event");
 // const HandlerList = Java.type("org.bukkit.event.HandlerList");
