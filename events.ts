@@ -24,6 +24,7 @@ const eventTypes = {
 
 
 if (!Events) {
+    magik.dixit(Object.keyglobal)
     const Emitter = new EventEmitter();
 
 
