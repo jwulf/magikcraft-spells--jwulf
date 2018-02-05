@@ -1,5 +1,5 @@
 declare const echo:any;
 
-const events = require('events');
+import * a
 
 events.playerInteract(evt => echo("Interact!"));
