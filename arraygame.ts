@@ -12,6 +12,6 @@ function main(numeral, player) {
             return;
         }
     }
-    input(self, 'Pick a number between 0 and 9 inclusive', arraygame);
+    input(self, 'Pick a number between 0 and 9 inclusive', main);
 }
 
