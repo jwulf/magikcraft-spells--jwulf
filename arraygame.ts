@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
-const input = require('input');
+import * as input from 'input'
 
 const numerals = ['Zero', 'One', 'Two', 'Three', 'Four','Five', 'Six', 'Seven', 'Eight', 'Nine'];
 
