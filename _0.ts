@@ -1,4 +1,6 @@
 const magik = magikcraft.io
 
-import * a
-magik.dixit(self.toString())
+import * as events from 'events'
+
+events.playerInteract(evt => echo(evt.player, 'Interact!'))
+magik.dixit('Event registered')
