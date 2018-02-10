@@ -1,6 +1,7 @@
 const magik = magikcraft.io;
 
 function main(target: string){
+    con
     const EntityType = magik.type("entity.EntityType");
     const aZombie = EntityType['ZOMBIE'];
     
