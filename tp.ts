@@ -6,6 +6,6 @@ function tp() {
         magik.ianuae(there);
     } else {
         const here = magik.hic();
-        magik.memento(here);
+        magik.memento('loc', here);
     }
 }
