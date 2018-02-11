@@ -46,7 +46,7 @@ function main() {
 
    magik.doNTimes(() => {
        magik.doNTimes(() => {
-           magik.doNTimes(() => {blast(x,z)}, 15)}, 
-        15)}, 
-    15, p5);
+           magik.doNTimes(() => {blast(x,z)}, 5)}, 
+        5)}, 
+    5, p5);
 }
