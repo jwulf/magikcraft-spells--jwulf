@@ -7,7 +7,7 @@ function main(n = 20){
     const where = magik.aspecto();
     const world = where.getWorld();
 
-    for (let i; i< n; i++) {
+    for (let i=0; i < n; i++) {
         const zombie = world.spawnEntity(where, aZombie); 
     }
     magik.dixit("Behold!");
