@@ -1,5 +1,7 @@
-const magik = magikcraft.io;
+const magik = magikcraft.io
 
-function _a() {
-	magik.dixit('Hanoi V2.0');
-}
+const e = new EventEmitter();
+
+e.on('something', () => magik.dixit('called'))
+
+e.emit('something')

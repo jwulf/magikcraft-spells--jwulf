@@ -8,7 +8,7 @@ function rsummon(name, mob = 'zombie') {
     }
 
     const sender = magik.getSender();
-    const name = name || sender.name;
+    name = name || sender.name;
 
     // run(`execute ${name} ~ ~ ~ summon ${mob} ~14 ~3 ~-10`);
     // run(`execute ${name} ~ ~ ~ summon ${mob} ~5 ~3 ~-15`);

@@ -12,7 +12,7 @@ const fontData = {
     i: [255, 126, 24, 24, 24, 24, 126, 255]
 } 
 
-function _write(letters = 'a') {
+function main(letters = 'a') {
     const BLOCK = magik.type('Material').STONE
 
     const number2binary = num => num.toString(2)

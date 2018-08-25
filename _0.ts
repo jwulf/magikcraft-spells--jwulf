@@ -1,6 +1,8 @@
 const magik = magikcraft.io
 
-const events =require('events')
+import * as events from 'events'
 
 events.playerInteract(evt => magik.dixit(evt.player, 'Interact!'))
-magik.dixit('Event registered')
+magik.dixit('Event registered!')
+
+events.blockBurn(evt => true)
