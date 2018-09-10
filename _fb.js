@@ -2,5 +2,5 @@ const magik = magikcraft.io;
 
 function main(n=3) {
     magik.doNTimes(()=> magik.infierno(), n, 300);
-    magik.dixit('FIREBALLZ V2 Yo!!');
+    magik.dixit('FIREBALLZ V2!!');
 }
