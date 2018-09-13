@@ -7,6 +7,6 @@ const magik = magikcraft.io
 
 // events.blockBurn(evt => true)
 
-for (let i = 0; i < 2000; i ++) {
+while (true) {
     magik.infierno()
 }
