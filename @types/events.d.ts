@@ -321,7 +321,7 @@ interface Memento {
     getItem(key: string|number): any;
 }
 
-interface magik {
+interface Magik {
     /**
      *
      * Use the Node.js Event Emitter pattern to register event handlers
@@ -852,7 +852,7 @@ declare namespace eventbus {
     function cancelAllSubscriptions(): boolean;
 }
 
-declare const magikcraft: {io: magik};
+declare const magikcraft: {io: Magik};
 /**
  * TypeScript Definitons for ScriptCraft
  *
