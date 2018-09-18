@@ -30,5 +30,5 @@ worlds.map(w => {
     executeCommand(`mv load ${w}`)
 })
 
-
+executeCommand('hd reload')
 
