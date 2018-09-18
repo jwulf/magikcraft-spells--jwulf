@@ -7,6 +7,8 @@ const magik = magikcraft.io
 
 // events.blockBurn(evt => true)
 
-while (true) {
-    magik.infierno()
-}
+// while (true) {
+//     magik.infierno()
+// }
+
+magik.dixit('Hello World!')
