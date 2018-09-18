@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
 
-function main() {
+function main(name = 'home') {
     const here = magik.hic();
-    magik.memento.setItem('home', here);
+    magik.memento.setItem(name, here);
 }
