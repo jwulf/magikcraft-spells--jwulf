@@ -11,7 +11,8 @@ const magik = magikcraft.io
 //     magik.infierno()
 // }
 
+
 function main(...name) {
-    magik.dixit(name)
+    magik.dixit(f)
     magik.dixit('Hello ' + name.join(' '))
 }
