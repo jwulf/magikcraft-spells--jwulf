@@ -10,9 +10,10 @@ const magik = magikcraft.io
 // while (true) {
 //     magik.infierno()
 // }
-
+var inventory = require('inventory');
+var items = require('items');
 
 function main(...name) {
-    magik.dixit(f)
+    magik.dixit(self)
     magik.dixit('Hello ' + name.join(' '))
 }
