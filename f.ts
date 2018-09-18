@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
 
 function f() {
-    magik.volare();
+    magik.infierno(10);
 }
