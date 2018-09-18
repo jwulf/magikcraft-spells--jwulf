@@ -6,5 +6,5 @@ const items = require('items')
 function main() {
   const myInventory = inventory(self)
   myInventory.add( items.cookie(1) )
-    .add( items.batSpawnEgg(1) )
+    .add( items.diamondAxe(1) )
 }
