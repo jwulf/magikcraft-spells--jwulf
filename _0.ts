@@ -12,7 +12,7 @@ const magik = magikcraft.io
 // }
 
 function main() {
-    magik.dixit('Hello ' + args.reduce((a, all) => {
+    magik.dixit('Hello ' + arguments.reduce((a, all) => {
         all + ' ' + a 
     }, ''))
 }
