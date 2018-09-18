@@ -14,6 +14,9 @@ var inventory = require('inventory');
 var items = require('items');
 
 function main(...name) {
-    magik.dixit(self)
+    // magik.dixit(self)
+    inventory(self)
+    .add( items.cookie(1) )
+    .add( items.bakedPotato(1) )
     magik.dixit('Hello ' + name.join(' '))
 }
