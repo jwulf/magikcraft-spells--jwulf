@@ -1,6 +1,6 @@
 var magik = magikcraft.io;
 
-function spawnz(typ='ZOMBIE', n = 15, times = 5, baseloc){
+function main(typ='ZOMBIE', n = 15, times = 5, baseloc){
     const EntityType = magik.type("entity.EntityType");
     const sender = magik.getSender();
     
