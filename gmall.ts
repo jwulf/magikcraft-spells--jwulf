@@ -4,6 +4,7 @@ const utils = require('utils')
 function main(mode = 'a') { 
     const GameMode = Java.type("org.bukkit.GameMode");
     const modes = {
+        a: GameMode.ADVENTURE,
         c: GameMode.CREATIVE,
         s: GameMode.SURVIVAL,
         x: GameMode.SPECTATOR
