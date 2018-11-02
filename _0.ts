@@ -14,5 +14,7 @@ var inventory = require('inventory');
 var items = require('items');
 
 function main() {
-    magik.exsultus(50)
+    // magik.exsultus(50)
+    magik.memento('hello')
+    magik.dixit(magik.exmemento())
 }
