@@ -1386,7 +1386,7 @@ var _Json_runOnString = F2(function(decoder, string)
 {
 	try
 	{
-        print("Decoding string " + string)
+        magik.dixit("Decoding string " + string)
 		var value = JSON.parse(string);
 		return _Json_runHelp(decoder, value);
 	}
