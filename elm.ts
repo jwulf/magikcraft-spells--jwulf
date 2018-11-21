@@ -1386,6 +1386,7 @@ var _Json_runOnString = F2(function(decoder, string)
 {
 	try
 	{
+        print("Decoding string " + string)
 		var value = JSON.parse(string);
 		return _Json_runHelp(decoder, value);
 	}
@@ -2817,6 +2818,7 @@ var author$project$Main$main = elm$core$Platform$worker(
 	});
 _Platform_export({'Main':{'init':author$project$Main$main(
 	elm$json$Json$Decode$succeed(0))(0)}});}(this));
+
 const magik = magikcraft.io
 
 function main() {
