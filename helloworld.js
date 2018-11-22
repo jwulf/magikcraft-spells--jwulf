@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
 
-function helloworld() {
+function main() {
     magik.dixit("¡Hello Tim!");
     magik.doNTimes((count) => {magik.dixit(count)}, 5);
 }
