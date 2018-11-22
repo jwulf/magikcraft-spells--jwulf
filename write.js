@@ -33,7 +33,7 @@ const fontData = {
   Then wipe them out.
   */
 
-function write(word = 'abc') {
+function main(word = 'abc') {
     const BLOCK_TYPE = magik.type('Material').STONE
     const PERSIST_SECONDS = 10
     const BLOCKS_BETWEEN_LETTERS = 2
