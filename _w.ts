@@ -33,13 +33,12 @@ const fontData = {
   Then wipe them out.
   */
 
-function main(word = 'abc') {
-
+function main(word = 'abc' /*default argument value*/) {
     const BLOCK_TYPE = magik.type('Material').STONE
-    const PERSIST_SECONDS = 10 
-    const BLOCKS_BETWEEN_LETTERS = 2
-    const BITS = fontData.BLOCKS_PER_CHAR_LINE
-    const SPACING = BLOCKS_BETWEEN_LETTERS + BITS
+    const PERSIST_SECONDS = 10 // How long the letters persist
+    const BLOCKS_BETWEEN_LETTERS = 2 // Spacing between letters
+    const BITS = fontData.BLOCKS_PER_CHAR_LINE // How many blocks wide each letter is
+    const SPACING = BLOCKS_BETWEEN_LETTERS + BITS // Letter width + spacing between letters
     const blocks = []
 
     const decimal2binary = num => num.toString(2)
@@ -56,7 +55,7 @@ function main(word = 'abc') {
     const y = here.getY() + 1 // vertical
     const z = here.getZ() // the other horizontal
 
-    const letters = Array.from(word) // Convert to Array to get forEach
+    const letters = Array.from(word) // Convert String to Array to get forEach method
     letters.forEach((char, letternum) => 
         binaryMap(fontData[char]).forEach((line, linenum) => 
             line.forEach((block, blocknum) => 
