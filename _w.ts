@@ -51,6 +51,7 @@ const fontData = {
   */
 
 function main(word = 'abc' /*default argument value*/) {
+    magik.dixit("Hello")
     const BLOCK_TYPE = magik.type('Material').STONE
     const PERSIST_SECONDS = 10 // How long the letters persist
     const BLOCKS_BETWEEN_LETTERS = 2 // Spacing between letters
