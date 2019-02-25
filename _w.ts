@@ -72,7 +72,7 @@ function main(word = 'abc' /*default argument value*/) {
     const y = here.getY() + 1 // vertical
     const z = here.getZ() // the other horizontal
 
-    const letters = Array.from(word) // Convert String to Array to get forEach method
+    const letters = Array.from(word.toLowerCase()) // Convert String to Array to get forEach method
     letters.forEach((char, letternum) => 
         binaryMap(fontData[char]).forEach((line, linenum) => 
             line.forEach((block, blocknum) => 
