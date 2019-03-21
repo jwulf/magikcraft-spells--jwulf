@@ -88,5 +88,5 @@ function main(word = 'abc' /*default argument value*/) {
         blocks.forEach(block => transformBlock(block));
         magik.dixit("Disappearing...")
     }, PERSIST_SECONDS * 1000);
-    magik.dixit("Setting timeout")
+    magik.dixit("Setting timeout");
 }
