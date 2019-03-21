@@ -52,7 +52,7 @@ const fontData = {
 
 function main(word = 'abc' /*default argument value*/) {
     magik.dixit("Hello");
-    const BLOCK_TYPE = magik.type('Material').AIR
+    const BLOCK_TYPE = magik.type('Material').STONE
     const PERSIST_SECONDS = 10 // How long the letters persist
     const BLOCKS_BETWEEN_LETTERS = 2 // Spacing between letters
     const BITS = fontData.BLOCKS_PER_CHAR_LINE // How many blocks wide each letter is
@@ -84,10 +84,10 @@ function main(word = 'abc' /*default argument value*/) {
                     z, 
                     blockType: BLOCK_TYPE})))));
 
-    // // Make word disappear
-    // magik.setTimeout(() => {
-    //     blocks.forEach(block => transformBlock(block));
-    //     magik.dixit("Disappearing...")
-    // }, PERSIST_SECONDS * 1000);
-    // magik.dixit("Setting timeout");
+    // Make word disappear
+    magik.setTimeout(() => {
+        blocks.forEach(block => transformBlock(block));
+        magik.dixit("Disappearing...")
+    }, PERSIST_SECONDS * 1000);
+    magik.dixit("Setting timeout");
 }
