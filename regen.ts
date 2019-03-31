@@ -9,6 +9,7 @@ function main() {
     const player = magik.getSender()
     let t = 0
     const doIt = () => setTimeout(() => {
+        magik.dixit('Di')
         t ++
         const loc1: any = player.getLocation()
 
