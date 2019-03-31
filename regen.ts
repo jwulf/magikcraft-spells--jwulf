@@ -8,7 +8,7 @@ function main() {
     magik.dixit('Fix it!')
     const player = magik.getSender()
     let t = 0
-    const doIt = () => setTimeout(() => {
+    const doIt = () => magik.setTimeout(() => {
         magik.dixit('Doing it')
         t ++
         const loc1: any = player.getLocation()
