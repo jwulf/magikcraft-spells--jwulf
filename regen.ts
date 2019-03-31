@@ -5,4 +5,5 @@ function main() {
     const loc = world.getSpawnLocation()
 
     world.regenerateChunk(loc.x, loc.z)
+    magik.dixit('Fix it!')
 }
