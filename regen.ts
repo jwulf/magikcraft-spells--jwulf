@@ -20,7 +20,7 @@ function main() {
         magik.dixit('chunkZ = ' + chunkZ)
 
         wolrd.regenerateChunk(chunkX, chunkZ)
-        if (t<30) doIt() else magik.dixit('Done!')
+        if (t<30) {doIt() }else {magik.dixit('Done!')}
     }, 1000)
     doIt()
 }
