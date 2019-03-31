@@ -7,7 +7,9 @@ function main() {
     world.regenerateChunk(loc.chunk.x, loc.chunk.z)
     magik.dixit('Fix it!')
     const player = magik.getSender()
+    
 const loc1: any = player.getLocation()
+
 const wolrd: any = player.getWorld()
 const chunkX = loc1.chunk.x
 const chunkZ = loc1.chunk.z
