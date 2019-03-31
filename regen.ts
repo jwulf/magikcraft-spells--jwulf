@@ -9,7 +9,7 @@ function main() {
     const player = magik.getSender()
     let t = 0
     const doIt = () => setTimeout(() => {
-        magik.dixit('Di')
+        magik.dixit('Doing it')
         t ++
         const loc1: any = player.getLocation()
 
@@ -20,7 +20,7 @@ function main() {
         magik.dixit('chunkZ = ' + chunkZ)
 
         wolrd.regenerateChunk(chunkX, chunkZ)
-        if (t<500) doIt() else magik.dixit('Done!')
-    }, 200)
+        if (t<30) doIt() else magik.dixit('Done!')
+    }, 1000)
     doIt()
 }
