@@ -48,11 +48,11 @@ const fontData = {
 /* 
   Write the specified letters in space with blocks
   Then wipe them out.
-  */
+  */ 
 
 function main(word = 'abc' /*default argument value*/) {
     magik.dixit("Hello");
-    const BLOCK_TYPE = magik.type('Material').STONE
+    const BLOCK_TYPE = Java.type('org.bukkit.Material').STONE
     const PERSIST_SECONDS = 10 // How long the letters persist
     const BLOCKS_BETWEEN_LETTERS = 2 // Spacing between letters
     const BITS = fontData.BLOCKS_PER_CHAR_LINE // How many blocks wide each letter is

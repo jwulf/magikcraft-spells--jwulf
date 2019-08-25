@@ -2,7 +2,8 @@ var magik = magikcraft.io;
 
 // anvil rain
 
-function arain(radius, typ){
+function main(radius, typ){
+    echo(self, "Hello there!")
     radius = parseInt(radius) || 20;
     typ = typ || "ANVIL";
     for (var i = 0; i < 200; i++) {
