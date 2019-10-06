@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
 
-function fb(repeats = 5, delay = 400) {
+function main(repeats = 5, delay = 400) {
     magik.dixit('Fireball!');
     const sender = magik.getSender();
     const fireball = magik.type("entity.Fireball").class;
