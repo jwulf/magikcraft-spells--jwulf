@@ -24,6 +24,7 @@ function cancelTracker() {
 }
 
 function track(target, period) {
+    magik.memento.setItem("target", target)
     magik.memento.setItem('tracker',
         setInterval(() => {
             self.setCompassTarget(target.location)
