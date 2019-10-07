@@ -1,6 +1,5 @@
 const magik = magikcraft.io;
 
-
 function main(name: string) {
     const Villager = Java.type("org.bukkit.entity.EntityType").VILLAGER;
     const world = magik.getSender().getWorld();
