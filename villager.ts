@@ -6,7 +6,7 @@ function main(name: string) {
     const there = magik.aspecto();
     const mob = world.spawnEntity(there, Villager);
     if (name) {
-        mob.setCustomName('Curly')
+        mob.setCustomName(name)
         mob.setCustomNameVisible(true)
     }
 }
