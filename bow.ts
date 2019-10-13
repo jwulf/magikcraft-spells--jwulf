@@ -1,6 +1,7 @@
 const magik = magikcraft.io;
 import * as events from 'events'
-const Collectors = Java.type('')
+const Collectors = java.util.stream.Collectors;
+
 function main() {
     const me = self
     const ItemStack = Java.type('org.bukkit.inventory.ItemStack')
@@ -31,7 +32,7 @@ function main() {
         .stream()
         .filter(entity => entity != me)
         .collect(Collectors.toList())
-        e.setProjectile(victim)
+        e.setProjectile(victim[0])
     })
     magik.memento.setItem('bowHandler', handler)
 
