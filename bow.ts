@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
-
+import * as events from 'events'
 function main() {
     const ItemStack = Java.type('org.bukkit.inventory.ItemStack')
 
@@ -10,5 +10,8 @@ function main() {
     const Arrow = Java.type('org.bukkit.Material').ARROW
     const arrow = new ItemStack(Arrow,100)
     self.getInventory().addItem(arrow)
+    events.entityShootBow(e => {
+        e.setProjectile()
+    })
 }
 
