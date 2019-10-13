@@ -3,7 +3,7 @@ import * as events from 'events'
 const Collectors = java.util.stream.Collectors;
 const ChatColor = Java.type('org.bukkit.ChatColor')
 const HANDLER = 'ZombieBowHandler'
-
+const NAME = ChatColor.GREEN + "Zombie Bow"
 function main() {
     const me = self
     const ItemStack = Java.type('org.bukkit.inventory.ItemStack')
@@ -11,7 +11,7 @@ function main() {
     const Bow = Java.type('org.bukkit.Material').BOW
     const bow = new ItemStack(Bow)
     const bowmeta = bow.getItemMeta();
-    bowmeta.setDisplayName(ChatColor.GREEN + "Zombie Bow");
+    bowmeta.setDisplayName(NAME);
     echo(self, bowmeta.getAttributeModifiers())
     bow.setItemMeta(bowmeta)
     self.getInventory().addItem(bow)
@@ -24,7 +24,7 @@ function main() {
         existingHandler.unregister()
     }
     const handler = events.entityShootBow(e => {
-        if (bow != e.getBow()) {
+        if (e.getBow().getItemMeta().getDisplayName() !== NAME) {
             echo(me, 'Not the Zombie Bow!')
 
             return
