@@ -17,8 +17,11 @@ function main() {
     }
     const handler = events.entityShootBow(e => {
         if (e.getEntity() != me) {
+            echo(me, 'Not me shooting the bow!')
             return
         }
+        echo(me, 'Me shooting the bow!')
+
         const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
         const there = magik.aspecto()
         const world = there.world
