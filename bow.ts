@@ -8,7 +8,7 @@ function main() {
     self.getInventory().addItem(bow)
 
     const Arrow = Java.type('org.bukkit.Material').ARROW
-    const arrow = new ItemStack(Arrow)
+    const arrow = new ItemStack(Arrow,100)
     self.getInventory().addItem(arrow)
 }
 
