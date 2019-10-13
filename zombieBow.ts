@@ -21,13 +21,13 @@ function main() {
     }
     const handler = events.entityShootBow(e => {
         if (bow != e.getBow()) {
+            echo(me, 'Not the Zombie Bow!')
+
             return
         }
         if (e.getEntity() != me) {
-            echo(me, 'Not me shooting the bow!')
             return
         }
-        echo(me, 'Me shooting the bow!')
 
         const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
         const there = magik.aspecto()
@@ -35,7 +35,7 @@ function main() {
         const zombie = world.spawnEntity(e.getProjectile().getLocation(), aZombie);
         const velocity = e.getProjectile().getVelocity()
         zombie.setVelocity(velocity)
-    
+
         e.setProjectile(zombie);
     })
     magik.memento.setItem(HANDLER, handler)
