@@ -1,5 +1,6 @@
 const magik = magikcraft.io;
 import * as events from 'events'
+const Collectors = Java.type('')
 function main() {
     const me = self
     const ItemStack = Java.type('org.bukkit.inventory.ItemStack')
@@ -22,11 +23,15 @@ function main() {
         }
         echo(me, 'Me shooting the bow!')
 
-        const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
+        // const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
         const there = magik.aspecto()
         const world = there.world
-        const zombie = world.spawnEntity(there, aZombie);
-        e.setProjectile(zombie)
+        // const zombie = world.spawnEntity(there, aZombie);
+        const victim = world.getLivingEntities()
+        .stream()
+        .filter(entity => entity != me)
+        .collect(Collectors.toList())
+        e.setProjectile(victim)
     })
     magik.memento.setItem('bowHandler', handler)
 
