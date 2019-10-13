@@ -12,7 +12,6 @@ function main() {
     const bow = new ItemStack(Bow)
     const bowmeta = bow.getItemMeta();
     bowmeta.setDisplayName(NAME);
-    echo(self, bowmeta.getAttributeModifiers())
     bow.setItemMeta(bowmeta)
     self.getInventory().addItem(bow)
 
