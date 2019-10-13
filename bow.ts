@@ -12,7 +12,10 @@ function main() {
     self.getInventory().addItem(arrow)
     events.entityShootBow(e => {
          const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
-        e.setProjectile(aZombie)
+         const there = magik.aspecto()
+         const world = there.world
+         const zombie = world.spawnEntity(there, aZombie); 
+        e.setProjectile(zombie)
     })
 }
 
