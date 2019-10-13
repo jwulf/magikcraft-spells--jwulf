@@ -28,7 +28,8 @@ function main() {
         const there = magik.aspecto()
         const world = there.world
         const zombie = world.spawnEntity(e.getProjectile().getLocation(), aZombie);
-
+        const velocity = e.getProjectile().getVelocity()
+        zombie.setVelocity(velocity)
     
         e.setProjectile(zombie);
     })
