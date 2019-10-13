@@ -24,15 +24,13 @@ function main() {
         }
         echo(me, 'Me shooting the bow!')
 
-        // const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
+        const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
         const there = magik.aspecto()
         const world = there.world
-        // const zombie = world.spawnEntity(there, aZombie);
-        const victim = world.getLivingEntities()
-        .stream()
-        .filter(entity => entity != me)
-        .collect(Collectors.toList())
-        e.setProjectile(victim[0])
+        const zombie = world.spawnEntity(e.getProjectile().getLocation(), aZombie);
+
+    
+        e.setProjectile(zombie);
     })
     magik.memento.setItem('bowHandler', handler)
 
