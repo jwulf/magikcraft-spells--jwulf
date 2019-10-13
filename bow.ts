@@ -11,7 +11,8 @@ function main() {
     const arrow = new ItemStack(Arrow,100)
     self.getInventory().addItem(arrow)
     events.entityShootBow(e => {
-        e.setProjectile()
+         const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
+        e.setProjectile(aZombie)
     })
 }
 
