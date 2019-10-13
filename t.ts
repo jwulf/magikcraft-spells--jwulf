@@ -9,9 +9,6 @@ function main() {
         .stream()
         .filter(e => e.getName() !== self.name)
         .collect(Collectors.toList())
-    
-    
-
     if (entities.length > 0) {
         track(entities[0].getName())
     } else {
