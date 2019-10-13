@@ -1,7 +1,7 @@
 const magik = magikcraft.io;
 import * as events from 'events'
 const Collectors = java.util.stream.Collectors;
-
+const ChatColor = Java.type('org.org.bukkit.ChatColor')
 const HANDLER = 'ZombieBowHandler'
 
 function main() {
@@ -10,6 +10,8 @@ function main() {
 
     const Bow = Java.type('org.bukkit.Material').BOW
     const bow = new ItemStack(Bow)
+    const bowmeta = bow.getItemMeta();
+    bowmeta.setDisplayName(ChatColor.GREEN + "Zombie Bow");
     self.getInventory().addItem(bow)
 
     const Arrow = Java.type('org.bukkit.Material').ARROW
