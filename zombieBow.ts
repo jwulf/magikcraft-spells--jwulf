@@ -1,7 +1,7 @@
 const magik = magikcraft.io;
 import * as events from 'events'
 const Collectors = java.util.stream.Collectors;
-const ChatColor = Java.type('org.org.bukkit.ChatColor')
+const ChatColor = Java.type('org.bukkit.ChatColor')
 const HANDLER = 'ZombieBowHandler'
 
 function main() {
