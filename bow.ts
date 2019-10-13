@@ -9,17 +9,21 @@ function main() {
     self.getInventory().addItem(bow)
 
     const Arrow = Java.type('org.bukkit.Material').ARROW
-    const arrow = new ItemStack(Arrow,100)
+    const arrow = new ItemStack(Arrow, 100)
     self.getInventory().addItem(arrow)
-    events.entityShootBow(e => {
-        if (e.getEntity() != me) {
-            return
-        }
-         const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
-         const there = magik.aspecto()
-         const world = there.world
-         const zombie = world.spawnEntity(there, aZombie); 
-        e.setProjectile(zombie)
-    })
+    if (!magik.memento.getItem('bowHandler')) {
+        magik.memento.setItem('bowHandler',
+
+            events.entityShootBow(e => {
+                if (e.getEntity() != me) {
+                    return
+                }
+                const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
+                const there = magik.aspecto()
+                const world = there.world
+                const zombie = world.spawnEntity(there, aZombie);
+                e.setProjectile(zombie)
+            }))
+    }
 }
 
