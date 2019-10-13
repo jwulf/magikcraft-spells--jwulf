@@ -12,6 +12,7 @@ function main() {
     const bow = new ItemStack(Bow)
     const bowmeta = bow.getItemMeta();
     bowmeta.setDisplayName(ChatColor.GREEN + "Zombie Bow");
+    bow.setItemMeta(bowmeta)
     self.getInventory().addItem(bow)
 
     const Arrow = Java.type('org.bukkit.Material').ARROW
