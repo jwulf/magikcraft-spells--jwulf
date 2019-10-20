@@ -38,7 +38,7 @@ function main() {
         const aZombie = Java.type("org.bukkit.entity.EntityType").ZOMBIE
         const there = magik.aspecto()
         const world = there.world
-        const zombie: LivingEntity = world.spawnEntity(e.getProjectile().getLocation(), aZombie);
+        const zombie = world.spawnEntity(e.getProjectile().getLocation(), aZombie);
         const velocity = e.getProjectile().getVelocity()
         zombie.setVelocity(velocity)
         zombie.setAI(false)
