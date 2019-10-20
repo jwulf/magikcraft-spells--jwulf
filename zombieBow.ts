@@ -42,6 +42,8 @@ function main() {
         const velocity = e.getProjectile().getVelocity()
         zombie.setVelocity(velocity)
 
+        zombie.setAI(false)
+
         e.setProjectile(zombie);
     })
     magik.memento.setItem(HANDLER, handler)
