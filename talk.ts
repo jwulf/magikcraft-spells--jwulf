@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
 
-function main(words) {
-	magik.dixit(words)
+function main(power = 15) {
+	magik.exsultus(power)
 }
